@@ -1,0 +1,19 @@
+<% @contacts.each do |contact| %>
+	<ul>
+		<%if contact.first_name %>
+			<li><b>First Name</b>: <%= contact.first_name %></li>
+		<% end %>
+		<%if contact.surname %>
+			<li><b>Surname</b>: <%= contact.surname %></li>
+		<% end %>
+		<%if contact.address %>
+			<li><b>Address</b>: <%= contact.address %></li>
+		<% end %>
+		<%if contact.phone_number %>
+			<li><b>Phone Number</b>: <%= contact.phone_number %></li>
+		<% end %>
+		<%if contact.email %>
+			<li><b>E-mail</b>: <%= contact.email %></li>
+		<% end %>
+	</ul>
+<% end %>
