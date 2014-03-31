@@ -9,8 +9,7 @@ gem 'database_cleaner', '~> 0.8.0'
 gem 'faker' #needed in staging for db:seed
 gem 'factory_girl' # needed in staging for db:seed
 gem 'activerecord-postgresql-adapter'
-
-
+gem 'simple_form', '2.0.2'
 
 # Gems used only for assets and not required
 # in production environments by default.

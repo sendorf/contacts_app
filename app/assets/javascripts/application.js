@@ -12,5 +12,5 @@
 //
 
 //= require bootstrap.min
-
+//= require jQuery
 
