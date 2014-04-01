@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
 		if @contact.save
 			redirect_to @contact
 		else
-			redirect_to new_server_path(@contact)
+			redirect_to new_contact_path(@contact)
 		end
 	end
 
@@ -25,4 +25,23 @@ class ContactsController < ApplicationController
 		@contact = Contact.find(params[:id])
 	end
 
+	def update
+
+		@contact = Contact.find(params[:id])
+
+		if @contact.update_attributes(params[:contact])
+			redirect_to @contact
+		else
+			redirect_to edit_server_path(@contact)
+		end
+	end
+
+	def destroy
+		@contact = Contact.find(params[:id])
+		if @contact.destroy
+			redirect_to root_path
+		else
+			redirect_to @contact
+		end
+	end
 end

@@ -22,13 +22,12 @@
               :class => 'btn btn-info',
               :type => 'button',
   	%>
-  	<%= link_to "<i class='glyphicon glyphicon-trash white-icon'></i>
-              Delete Contact".html_safe,
-              edit_contact_path(@contact),
+    <%= link_to "<i class='glyphicon glyphicon-trash white-icon'></i> Delete Contact".html_safe,
+              contact_path(@contact),
               :class => 'btn btn-danger',
-              :type => 'button',
+              :type => 'submit',
               :method => :delete,
-  	%>
+    %>
   </div>
 </br>
 </div>

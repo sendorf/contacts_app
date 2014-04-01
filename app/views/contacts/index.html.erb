@@ -16,17 +16,22 @@
 		<li><b>E-mail</b>: <%= contact.email %></li>
 	</ul>
 	<div class ="buttons col-md-offset-1">
+    <%= link_to "<i class='glyphicon glyphicon-search white-icon'></i>
+              Show Contact".html_safe,
+              contact_path(contact),
+              :class => 'btn btn-warning',
+              :type => 'button',
+    %>
 		<%= link_to "<i class='glyphicon glyphicon-wrench white-icon'></i>
               Edit Contact".html_safe,
               edit_contact_path(contact),
               :class => 'btn btn-info',
               :type => 'button',
   	%>
-  	<%= link_to "<i class='glyphicon glyphicon-trash white-icon'></i>
-              Delete Contact".html_safe,
-              edit_contact_path(contact),
+  	<%= link_to "<i class='glyphicon glyphicon-trash white-icon'></i> Delete Contact".html_safe,
+              contact_path(contact),
               :class => 'btn btn-danger',
-              :type => 'button',
+              :type => 'submit',
               :method => :delete,
   	%>
   </div>
