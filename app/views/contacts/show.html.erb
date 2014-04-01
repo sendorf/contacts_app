@@ -6,25 +6,25 @@
               :type => 'button'
   %>
 </div>
-<% @contacts.each do |contact| %>
+
 <div class="col-md-offset-1">
 	<ul>
-		<li><b>First Name</b>: <%= contact.first_name %></li>
-		<li><b>Surname</b>: <%= contact.surname %></li>
-		<li><b>Address</b>: <%= contact.address %></li>
-		<li><b>Phone Number</b>: <%= contact.phone_number %></li>
-		<li><b>E-mail</b>: <%= contact.email %></li>
+		<li><b>First Name</b>: <%= @contact.first_name %></li>
+		<li><b>Surname</b>: <%= @contact.surname %></li>
+		<li><b>Address</b>: <%= @contact.address %></li>
+		<li><b>Phone Number</b>: <%= @contact.phone_number %></li>
+		<li><b>E-mail</b>: <%= @contact.email %></li>
 	</ul>
 	<div class ="buttons col-md-offset-1">
 		<%= link_to "<i class='glyphicon glyphicon-wrench white-icon'></i>
               Edit Contact".html_safe,
-              edit_contact_path(contact),
+              edit_contact_path(@contact),
               :class => 'btn btn-info',
               :type => 'button',
   	%>
   	<%= link_to "<i class='glyphicon glyphicon-trash white-icon'></i>
               Delete Contact".html_safe,
-              edit_contact_path(contact),
+              edit_contact_path(@contact),
               :class => 'btn btn-danger',
               :type => 'button',
               :method => :delete,
@@ -32,4 +32,3 @@
   </div>
 </br>
 </div>
-<% end %>
