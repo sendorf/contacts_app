@@ -29,5 +29,7 @@ http://fast-gorge.herokuapp.com
 or feel free to use any means of persistance; browser memory, local storage,
 database and backend technology of your choice.
 
+It is developed in ruby 1.9.2 to be compatible with the host's ruby version.
+
 Link to a the working application http://contacts.alwaysdata.net
 
